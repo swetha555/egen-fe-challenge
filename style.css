@@ -1,0 +1,62 @@
+
+
+html body{
+    margin:10px;
+    padding:10px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+
+input.ng-pristine + ul#strength {
+    display:none;
+}
+ul#strength {
+    display:block;
+    list-style:none;
+    margin:0;
+    margin-left:15px;
+    padding:0;
+    vertical-align:2px;
+}
+.meter:last {
+    margin:0 !important;
+}
+
+.meter {
+    background:#DDD;
+    border-radius:2px;
+    display:inline-block;
+    height:5px;
+    margin-right:1px;
+    width:20px;
+}
+.warningMessage{
+    display:inline;
+    color:red;
+}
+.blue{
+    color:  #0080ff;
+}
+.decolorWeak :nth-child(n+2){
+    background:#DDD;
+}
+.decolorLow :nth-child(n+3){
+    background:#DDD;
+}
+.decolorMed :nth-child(n+4){
+    background:#DDD;
+}
+.decolorHigh :last-child{
+    background:#DDD;
+}
+.decolorStr :nth-child(0){
+    background:#DDD;
+}
+
+.strong   { background: #00ff00;}
+.high   { background: #ff8000;}
+.medium   { background: #ff8000;}
+.weak     { background: #ff0000;}
+.low     { background: #ff0000;}
+.strength { background: 1px 10px; border: 2px solid; color: #FFF;}
