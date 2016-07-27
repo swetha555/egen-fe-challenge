@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <title>My AngularJS App</title>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+      <script src="sample.js"></script>
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <div ng-app="myApp">
+         <div  ng-controller="passwordController">
+            <form name="myForm" novalidate>
+               <label for="pw"><span class="blue">*</span>PASSWORD</label><br/>
+               <input type="password" ng-model="pw" name="pw" ng-keyup="validateFunction(pw)"/>
+               <ul id="strength" data-ng-class="strengthMeter" class="strengthMeter">
+                  <li data-ng-class="strength" class="meter"></li>
+                  <li  data-ng-class="strength" class="meter"></li>
+                  <li data-ng-class="strength" class="meter"></li>
+                  <li data-ng-class="strength" class="meter"></li>
+                  <li data-ng-class="strength" class="meter"></li>
+               </ul>
+               <div ng-if="result.errors.length > 0">
+                <!--
+                  <p class ="warningMessage" ng-repeat="x in result.errors">
+                     {{x.toString()}}
+                  </p>
+              -->
+              {{result.errorMessage}}
+               </div>
+            </form>
+         </div>
+      </div>
+   </body>
+</html> 
